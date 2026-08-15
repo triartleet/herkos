@@ -1,0 +1,50 @@
+{
+  "name": "herkos",
+  "version": "0.1.0",
+  "description": "Your never-list, enforced everywhere: block agents from reading credentials or running fetched code — one policy, compiled into every agent harness on your machine, in every mode.",
+  "type": "module",
+  "bin": {
+    "herkos": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "npm run build",
+    "prepublishOnly": "./scripts/artifact-check.sh"
+  },
+  "keywords": [
+    "agent",
+    "security",
+    "claude-code",
+    "codex",
+    "prompt-injection",
+    "credentials",
+    "hooks",
+    "guard"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "commander": "12.1.0",
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "prettier": "3.4.2",
+    "tsup": "8.3.5",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
+}

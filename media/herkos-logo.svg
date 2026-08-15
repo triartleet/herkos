@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="herkos — a defensive rampart of shields, one line an agent's forbidden actions cannot cross">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e2a3a"/>
+      <stop offset="1" stop-color="#121a24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c9433f"/>
+      <stop offset="0.5" stop-color="#f08a86"/>
+      <stop offset="1" stop-color="#c9433f"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c79a5b"/>
+      <stop offset="1" stop-color="#8a6636"/>
+    </linearGradient>
+    <linearGradient id="tick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb96a"/>
+      <stop offset="0.5" stop-color="#7fe6a0"/>
+      <stop offset="1" stop-color="#3fb96a"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="640" height="300" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="640" height="300" fill="url(#bg)"/>
+
+    <!-- the rampart line: what must never be crossed -->
+    <line x1="60" y1="196" x2="580" y2="196" stroke="url(#accent)" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+
+    <!-- an interlocked shield wall (the ἕρκος — the barrier). The two flanking
+         shields sit BEHIND; the marked central shield is drawn last, on top, so
+         its never-cross mark is always fully visible. -->
+    <g transform="translate(0,4)">
+      <!-- left, behind -->
+      <g transform="translate(238,150)" opacity="0.85">
+        <path d="M 0 -64 L 50 -43 L 50 25 Q 50 60 0 79 Q -50 60 -50 25 L -50 -43 Z" fill="url(#bronze)" stroke="#5e3d1b" stroke-width="3"/>
+        <path d="M 0 -49 L 37 -32 L 37 21 Q 37 47 0 62 Q -37 47 -37 21 L -37 -32 Z" fill="#2a3949"/>
+      </g>
+      <!-- right, behind -->
+      <g transform="translate(402,150)" opacity="0.85">
+        <path d="M 0 -64 L 50 -43 L 50 25 Q 50 60 0 79 Q -50 60 -50 25 L -50 -43 Z" fill="url(#bronze)" stroke="#5e3d1b" stroke-width="3"/>
+        <path d="M 0 -49 L 37 -32 L 37 21 Q 37 47 0 62 Q -37 47 -37 21 L -37 -32 Z" fill="#2a3949"/>
+      </g>
+      <!-- centre, on top, larger, carrying the protected mark (a tick) -->
+      <g transform="translate(320,148)">
+        <path d="M 0 -78 L 60 -52 L 60 30 Q 60 74 0 96 Q -60 74 -60 30 L -60 -52 Z" fill="url(#bronze)" stroke="#5e3d1b" stroke-width="3.5"/>
+        <path d="M 0 -60 L 44 -39 L 44 25 Q 44 56 0 74 Q -44 56 -44 25 L -44 -39 Z" fill="#243244"/>
+        <path d="M -24 2 L -6 22 L 26 -22" fill="none" stroke="url(#tick)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+  <rect x="1" y="1" width="638" height="298" rx="18" fill="none" stroke="#2b3a4d" stroke-width="2"/>
+</svg>
